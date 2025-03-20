@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4 text-center">Crear Examen</h1>
+
+    <!-- Formulario para seleccionar número de preguntas -->
+    <form method="POST" action="{{ url_for('crearExamen') }}" class="space-y-4">
+        {{ seleccionar_form.hidden_tag() }}
+        <div>
+            <label for="cantidad_preguntas" class="block text-sm font-medium text-gray-700">Número de preguntas:</label>
+            {{ seleccionar_form.cantidad_preguntas(class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md") }}
+            {% for error in seleccionar_form.cantidad_preguntas.errors %}
+                <span class="text-red-500 text-sm">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600">
+            Elegir preguntas
+        </button>
+    </form>
+
+    <!-- Formulario para crear el examen (se muestra después de seleccionar las preguntas) -->
+    {% if form.preguntas %}
+    <form method="POST" action="{{ url_for('crearExamen') }}" class="space-y-4">
+        {{ form.hidden_tag() }}
+        <div>
+            <label for="materia" class="block text-sm font-medium text-gray-700">Materia:</label>
+            {{ form.materia(class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md") }}
+            {% for error in form.materia.errors %}
+                <span class="text-red-500 text-sm">{{ error }}</span>
+            {% endfor %}
+        </div>
+
+        <!-- Renderizar cada pregunta y sus respuestas -->
+        {% for pregunta_form in form.preguntas %}
+        <div class="mt-4 pregunta-item">
+            <label for="pregunta" class="block text-sm font-medium text-gray-700">Pregunta {{ loop.index }}:</label>
+            {{ pregunta_form.pregunta(class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md") }}
+            {% for error in pregunta_form.pregunta.errors %}
+                <span class="text-red-500 text-sm">{{ error }}</span>
+            {% endfor %}
+
+            <div class="mt-2">
+                <label for="respuestas" class="block text-sm font-medium text-gray-700">Respuestas:</label>
+                {% for respuesta_form in pregunta_form.respuestas %}
+                    <div class="mt-2">
+                        {{ respuesta_form.respuesta(class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md") }}
+                        {{ respuesta_form.correcta }}
+                        {% for error in respuesta_form.respuesta.errors %}
+                            <span class="text-red-500 text-sm">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div>
+            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600">
+                Crear Examen
+            </button>
+        </div>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

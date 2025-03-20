@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4 text-center">Hacer Examen</h1>
+    {% if not alumno %}
+    <form method="POST" action="{{ url_for('hacerExamen') }}" class="space-y-4">
+        {{ form.hidden_tag() }}
+        <div>
+            <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre:</label>
+            {{ form.nombre(class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm") }}
+            {% for error in form.nombre.errors %}
+                <span class="text-red-500 text-sm">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <label for="grupo" class="block text-sm font-medium text-gray-700">Grupo:</label>
+            {{ form.grupo(class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm") }}
+            {% for error in form.grupo.errors %}
+                <span class="text-red-500 text-sm">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Buscar Examen
+            </button>
+        </div>
+    </form>
+    {% endif %}
+
+    {% if alumno %}
+        <h2 class="text-xl font-bold mb-2">{{ alumno.nombre }} - {{ alumno.grupo }}</h2>
+        {% for examen in examenes %}
+            <h3 class="text-lg font-bold mb-2">{{ examen.materia }}</h3>
+            <form method="POST" action="{{ url_for('resolverExamen', examen_id=examen.id) }}" class="space-y-4">
+                <input type="hidden" name="alumno_id" value="{{ alumno.id }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                {% for pregunta in examen.preguntas %}
+                    <div class="mt-4 pregunta-item">
+                        <label for="pregunta" class="block text-sm font-medium text-gray-700">{{ pregunta.pregunta }}</label>
+                        {% for respuesta in pregunta.respuestas %}
+                            <div class="mt-2">
+                                <input type="radio" name="pregunta_{{ pregunta.id }}" value="{{ respuesta.id }}" class="mr-2">
+                                <label>{{ respuesta.respuesta }}</label>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <div>
+                    <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Enviar Respuestas
+                    </button>
+                </div>
+            </form>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

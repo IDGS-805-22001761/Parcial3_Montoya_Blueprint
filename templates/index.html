@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mx-auto mt-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Agregar Alumno</div>
+                <p class="text-gray-700 text-base">
+                    Añade un nuevo alumno al sistema.
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <a href="{{ url_for('agregar') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Ir a Agregar Alumno
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Crear Examen</div>
+                <p class="text-gray-700 text-base">
+                    Crea un nuevo examen para los alumnos.
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <a href="{{ url_for('crearExamen') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Ir a Crear Examen
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Ver Calificaciones</div>
+                <p class="text-gray-700 text-base">
+                    Consulta las calificaciones de los alumnos.
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <a href="{{ url_for('calificaciones') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Ir a Ver Calificaciones
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Hacer Examen</div>
+                <p class="text-gray-700 text-base">
+                    Realiza un examen.
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <a href="{{ url_for('hacerExamen') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Ir a Hacer Examen
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
