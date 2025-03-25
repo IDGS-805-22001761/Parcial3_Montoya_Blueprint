@@ -11,7 +11,7 @@
                 </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-                <a href="{{ url_for('agregar') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ url_for('alumnos.agregar') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Ir a Agregar Alumno
                 </a>
             </div>
@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-                <a href="{{ url_for('crearExamen') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ url_for('examen.crear_examen') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Ir a Crear Examen
                 </a>
             </div>
@@ -37,7 +37,7 @@
                 </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-                <a href="{{ url_for('calificaciones') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ url_for('examen.calificaciones') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Ir a Ver Calificaciones
                 </a>
             </div>
@@ -50,8 +50,21 @@
                 </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-                <a href="{{ url_for('hacerExamen') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="{{ url_for('examen.realizar_examen', examen_id=1) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Ir a Hacer Examen
+                </a>
+            </div>
+        </div>
+        <div class="max-w-xs rounded overflow-hidden shadow-lg">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Gestión de Profesores</div>
+                <p class="text-gray-700 text-base">
+                    Administra los profesores del sistema.
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <a href="{{ url_for('profesores.listar_profesores') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Ir a Profesores
                 </a>
             </div>
         </div>

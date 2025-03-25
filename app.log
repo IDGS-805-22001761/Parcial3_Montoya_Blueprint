@@ -1,0 +1,229 @@
+2025-03-22 16:24:46,532 - INFO - La aplicaciï¿½n Flask ha iniciado correctamente.
+2025-03-22 16:24:46,583 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-22 16:24:46,584 - INFO - [33mPress CTRL+C to quit[0m
+
+2025-03-22 16:32:25,396 - INFO - Inicio de sesión exitoso: Usuario: Brandon
+2025-03-22 16:32:25,419 - INFO - 127.0.0.1 - - [22/Mar/2025 16:32:25] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-22 16:32:25,445 - INFO - 127.0.0.1 - - [22/Mar/2025 16:32:25] "GET / HTTP/1.1" 200 -
+2025-03-22 16:32:25,575 - INFO - 127.0.0.1 - - [22/Mar/2025 16:32:25] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-22 16:32:56,735 - INFO - 127.0.0.1 - - [22/Mar/2025 16:32:56] "GET /agregarAlumno HTTP/1.1" 200 -
+2025-03-22 16:32:56,834 - INFO - 127.0.0.1 - - [22/Mar/2025 16:32:56] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-22 16:33:02,543 - INFO - Alumno agregado: josue chavez hernandez, Grupo: IDGS801
+2025-03-22 16:33:02,546 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:02] "[32mPOST /agregarAlumno HTTP/1.1[0m" 302 -
+2025-03-22 16:33:02,566 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:02] "GET / HTTP/1.1" 200 -
+2025-03-22 16:33:02,636 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:02] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-22 16:33:17,800 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:17] "GET /crearExamen HTTP/1.1" 200 -
+2025-03-22 16:33:17,868 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:17] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-22 16:33:21,882 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:21] "POST /crearExamen HTTP/1.1" 200 -
+2025-03-22 16:33:21,933 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:21] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-22 16:33:29,616 - INFO - Examen creado: Materia: Geo, ID: 3
+2025-03-22 16:33:29,620 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:29] "[32mPOST /crearExamen HTTP/1.1[0m" 302 -
+2025-03-22 16:33:29,639 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:29] "GET / HTTP/1.1" 200 -
+2025-03-22 16:33:29,709 - INFO - 127.0.0.1 - - [22/Mar/2025 16:33:29] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-24 22:51:55,039 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 22:51:55,084 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:51:55,084 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:52:07,358 - INFO - 127.0.0.1 - - [24/Mar/2025 22:52:07] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-24 22:52:08,078 - INFO - 127.0.0.1 - - [24/Mar/2025 22:52:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 22:52:16,240 - INFO - 127.0.0.1 - - [24/Mar/2025 22:52:16] "[33mGET /agregarAlumno HTTP/1.1[0m" 404 -
+2025-03-24 22:52:26,570 - INFO - 127.0.0.1 - - [24/Mar/2025 22:52:26] "[33mGET /alumno HTTP/1.1[0m" 404 -
+2025-03-24 22:52:33,680 - INFO - 127.0.0.1 - - [24/Mar/2025 22:52:33] "[33mGET /alumno/agregarAlumno HTTP/1.1[0m" 404 -
+2025-03-24 22:53:02,717 - ERROR - Exception on /auth/login [GET]
+Traceback (most recent call last):
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "c:\Users\monto\Desktop\flask-login\blueprints\auth.py", line 22, in login
+    return render_template('login.html')
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\monto\Desktop\flask-login\templates\login.html", line 1, in top-level template code
+    {% extends "layout.html" %}
+  File "c:\Users\monto\Desktop\flask-login\templates\layout.html", line 36, in top-level template code
+    <a href="{{ url_for('index') }}"
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\monto\Desktop\flask-login\.venv\lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'auth.login' instead?
+2025-03-24 22:53:02,798 - INFO - 127.0.0.1 - - [24/Mar/2025 22:53:02] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+2025-03-24 22:53:14,698 - INFO - 127.0.0.1 - - [24/Mar/2025 22:53:14] "[33mGET /auth HTTP/1.1[0m" 404 -
+2025-03-24 22:55:24,588 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 22:55:24,645 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:55:24,645 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:55:24,648 - INFO -  * Restarting with stat
+2025-03-24 22:55:25,881 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 22:55:25,905 - WARNING -  * Debugger is active!
+2025-03-24 22:55:25,915 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 22:55:37,874 - INFO - 127.0.0.1 - - [24/Mar/2025 22:55:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 22:55:38,134 - INFO - 127.0.0.1 - - [24/Mar/2025 22:55:38] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-24 22:55:38,176 - INFO - 127.0.0.1 - - [24/Mar/2025 22:55:38] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-24 22:55:38,248 - INFO - 127.0.0.1 - - [24/Mar/2025 22:55:38] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=7y7BlsDjoG9oRWkf0hHO HTTP/1.1" 200 -
+2025-03-24 22:55:38,425 - INFO - 127.0.0.1 - - [24/Mar/2025 22:55:38] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-24 22:56:50,342 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\app.py', reloading
+2025-03-24 22:56:50,626 - INFO -  * Restarting with stat
+2025-03-24 22:57:08,529 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 22:57:08,572 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 22:57:08,572 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 22:57:08,578 - INFO -  * Restarting with stat
+2025-03-24 22:57:09,758 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 22:57:09,785 - WARNING -  * Debugger is active!
+2025-03-24 22:57:09,790 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 22:57:12,369 - INFO - 127.0.0.1 - - [24/Mar/2025 22:57:12] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 22:57:12,568 - INFO - 127.0.0.1 - - [24/Mar/2025 22:57:12] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 22:57:12,568 - INFO - 127.0.0.1 - - [24/Mar/2025 22:57:12] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 22:57:12,598 - INFO - 127.0.0.1 - - [24/Mar/2025 22:57:12] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=aGwQPumQqVbU3QWrgf4u HTTP/1.1" 200 -
+2025-03-24 22:57:12,641 - INFO - 127.0.0.1 - - [24/Mar/2025 22:57:12] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 22:58:05,732 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\app.py', reloading
+2025-03-24 22:58:05,885 - INFO -  * Restarting with stat
+2025-03-24 22:58:07,194 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 22:58:07,218 - WARNING -  * Debugger is active!
+2025-03-24 22:58:07,226 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 22:58:07,605 - INFO - 127.0.0.1 - - [24/Mar/2025 22:58:07] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 22:58:07,762 - INFO - 127.0.0.1 - - [24/Mar/2025 22:58:07] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 22:58:07,769 - INFO - 127.0.0.1 - - [24/Mar/2025 22:58:07] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 22:58:07,793 - INFO - 127.0.0.1 - - [24/Mar/2025 22:58:07] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=j2to91rwBG9kMTtvCWb1 HTTP/1.1" 200 -
+2025-03-24 22:58:07,833 - INFO - 127.0.0.1 - - [24/Mar/2025 22:58:07] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 22:59:15,701 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 22:59:15,843 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:15] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 22:59:15,848 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:15] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 22:59:15,925 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:15] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=j2to91rwBG9kMTtvCWb1 HTTP/1.1" 200 -
+2025-03-24 22:59:16,015 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:16] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 22:59:41,557 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 22:59:41,617 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:41] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 22:59:41,619 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:41] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 22:59:41,748 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:41] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=j2to91rwBG9kMTtvCWb1 HTTP/1.1" 200 -
+2025-03-24 22:59:41,808 - INFO - 127.0.0.1 - - [24/Mar/2025 22:59:41] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:01:40,060 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\examen.py', reloading
+2025-03-24 23:01:40,246 - INFO -  * Restarting with stat
+2025-03-24 23:01:41,599 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:01:41,633 - WARNING -  * Debugger is active!
+2025-03-24 23:01:41,644 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:02:03,876 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\examen.py', reloading
+2025-03-24 23:02:04,041 - INFO -  * Restarting with stat
+2025-03-24 23:02:05,225 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:02:05,255 - WARNING -  * Debugger is active!
+2025-03-24 23:02:05,263 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:02:11,697 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\examen.py', reloading
+2025-03-24 23:02:11,882 - INFO -  * Restarting with stat
+2025-03-24 23:02:13,205 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:02:13,234 - WARNING -  * Debugger is active!
+2025-03-24 23:02:13,243 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:03:24,836 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\app.py', reloading
+2025-03-24 23:03:25,080 - INFO -  * Restarting with stat
+2025-03-24 23:03:26,478 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:03:26,505 - WARNING -  * Debugger is active!
+2025-03-24 23:03:26,509 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:03:27,170 - INFO - 127.0.0.1 - - [24/Mar/2025 23:03:27] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 23:03:27,370 - INFO - 127.0.0.1 - - [24/Mar/2025 23:03:27] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:03:27,371 - INFO - 127.0.0.1 - - [24/Mar/2025 23:03:27] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:03:27,414 - INFO - 127.0.0.1 - - [24/Mar/2025 23:03:27] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=0vHHm3pNgPOGyvuyYxri HTTP/1.1" 200 -
+2025-03-24 23:03:27,465 - INFO - 127.0.0.1 - - [24/Mar/2025 23:03:27] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:05:42,196 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\examen.py', reloading
+2025-03-24 23:05:42,310 - INFO -  * Restarting with stat
+2025-03-24 23:05:43,347 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:05:43,364 - WARNING -  * Debugger is active!
+2025-03-24 23:05:43,372 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:05:44,484 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\examen.py', reloading
+2025-03-24 23:05:44,615 - INFO -  * Restarting with stat
+2025-03-24 23:05:45,639 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:05:45,659 - WARNING -  * Debugger is active!
+2025-03-24 23:05:45,664 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:06:24,617 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\examen.py', reloading
+2025-03-24 23:06:24,910 - INFO -  * Restarting with stat
+2025-03-24 23:06:26,242 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:06:26,275 - WARNING -  * Debugger is active!
+2025-03-24 23:06:26,284 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:08:31,327 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\auth.py', reloading
+2025-03-24 23:08:31,546 - INFO -  * Restarting with stat
+2025-03-24 23:08:32,868 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:08:32,898 - WARNING -  * Debugger is active!
+2025-03-24 23:08:32,903 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:08:40,333 - INFO -  * Detected change in 'c:\\Users\\monto\\Desktop\\flask-login\\blueprints\\profesores.py', reloading
+2025-03-24 23:08:40,669 - INFO -  * Restarting with stat
+2025-03-24 23:08:41,901 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:08:41,927 - WARNING -  * Debugger is active!
+2025-03-24 23:08:41,934 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:10:57,662 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:10:57,702 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-24 23:10:57,702 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 23:10:57,706 - INFO -  * Restarting with stat
+2025-03-24 23:10:58,938 - INFO - La aplicación Flask ha iniciado correctamente.
+2025-03-24 23:10:58,965 - WARNING -  * Debugger is active!
+2025-03-24 23:10:58,969 - INFO -  * Debugger PIN: 117-882-664
+2025-03-24 23:11:01,638 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 23:11:01,979 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:01] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:11:01,979 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:01] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:11:02,010 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:02] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1" 200 -
+2025-03-24 23:11:02,068 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:02] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:11:29,172 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 23:11:29,226 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:29] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:11:29,226 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:29] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:11:29,313 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:29] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1" 200 -
+2025-03-24 23:11:29,373 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:29] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:11:40,698 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 23:11:40,755 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:40] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:11:40,757 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:40] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:11:40,785 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:40] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1" 200 -
+2025-03-24 23:11:40,861 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:40] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:11:51,745 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-24 23:11:51,819 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:51] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:11:51,829 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:51] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:11:51,879 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:51] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1" 200 -
+2025-03-24 23:11:51,969 - INFO - 127.0.0.1 - - [24/Mar/2025 23:11:51] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:12:06,743 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:06] "GET / HTTP/1.1" 200 -
+2025-03-24 23:12:06,797 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:06] "GET /static/css/output.css HTTP/1.1" 200 -
+2025-03-24 23:12:07,009 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 23:12:13,352 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:13] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+2025-03-24 23:12:13,460 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:13] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:12:13,469 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:13] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:12:13,503 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:13] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1" 200 -
+2025-03-24 23:12:13,627 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:13] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:12:48,220 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:48] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+2025-03-24 23:12:48,331 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:48] "GET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-24 23:12:48,342 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:48] "GET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-24 23:12:48,371 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:48] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1" 200 -
+2025-03-24 23:12:48,434 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:48] "GET /auth/login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-24 23:12:50,105 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 23:12:52,051 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:52] "GET / HTTP/1.1" 200 -
+2025-03-24 23:12:52,132 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:52] "GET /static/css/output.css HTTP/1.1" 200 -
+2025-03-24 23:12:52,274 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 23:12:54,090 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:54] "[35m[1mGET /auth/login HTTP/1.1[0m" 500 -
+2025-03-24 23:12:54,166 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:54] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-03-24 23:12:54,172 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:54] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-03-24 23:12:54,204 - INFO - 127.0.0.1 - - [24/Mar/2025 23:12:54] "[36mGET /auth/login?__debugger__=yes&cmd=resource&f=console.png&s=NfnG3KOaqQVp8GXA9nYd HTTP/1.1[0m" 304 -
+2025-03-24 23:13:27,481 - INFO - 127.0.0.1 - - [24/Mar/2025 23:13:27] "GET /auth/login HTTP/1.1" 200 -
+2025-03-24 23:13:27,565 - INFO - 127.0.0.1 - - [24/Mar/2025 23:13:27] "GET /static/css/output.css HTTP/1.1" 200 -
+2025-03-24 23:13:27,762 - INFO - 127.0.0.1 - - [24/Mar/2025 23:13:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 23:13:41,115 - INFO - Inicio de sesión exitoso: Usuario: Brandon
+2025-03-24 23:13:41,121 - INFO - 127.0.0.1 - - [24/Mar/2025 23:13:41] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+2025-03-24 23:13:41,145 - INFO - 127.0.0.1 - - [24/Mar/2025 23:13:41] "GET / HTTP/1.1" 200 -
+2025-03-24 23:13:41,256 - INFO - 127.0.0.1 - - [24/Mar/2025 23:13:41] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-24 23:15:11,441 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:11] "GET / HTTP/1.1" 200 -
+2025-03-24 23:15:11,511 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:11] "GET /static/css/output.css HTTP/1.1" 200 -
+2025-03-24 23:15:11,712 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-24 23:15:13,497 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:13] "GET /profesores/ HTTP/1.1" 200 -
+2025-03-24 23:15:13,563 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:13] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-24 23:15:15,720 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:15] "GET /profesores/agregar HTTP/1.1" 200 -
+2025-03-24 23:15:15,804 - INFO - 127.0.0.1 - - [24/Mar/2025 23:15:15] "[36mGET /static/css/output.css HTTP/1.1[0m" 304 -
+2025-03-24 23:18:10,831 - INFO - 127.0.0.1 - - [24/Mar/2025 23:18:10] "GET /profesores/agregar HTTP/1.1" 200 -
+2025-03-24 23:18:10,933 - INFO - 127.0.0.1 - - [24/Mar/2025 23:18:10] "GET /static/css/output.css HTTP/1.1" 200 -
+2025-03-24 23:18:11,100 - INFO - 127.0.0.1 - - [24/Mar/2025 23:18:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

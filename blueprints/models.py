@@ -45,6 +45,15 @@ class Respuesta(db.Model):
     pregunta_id = db.Column(db.Integer, db.ForeignKey('pregunta.id'))
     created_date = db.Column(db.DateTime, default=datetime.datetime.now)
 
+class Profesor(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nombre = db.Column(db.String(100), nullable=False)
+    apellidos = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return f'<Profesor {self.nombre} {self.apellidos}>'
+
 alumno_examen = db.Table('alumno_examen',
     db.Column('alumno_id', db.Integer, db.ForeignKey('alumno.id'), primary_key=True),
     db.Column('examen_id', db.Integer, db.ForeignKey('examen.id'), primary_key=True),

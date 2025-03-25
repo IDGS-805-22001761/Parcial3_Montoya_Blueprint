@@ -1,0 +1,10 @@
+<h1>Lista de Exámenes</h1>
+<ul>
+    {% for examen in examenes %}
+        <li>
+            {{ examen.materia }}
+            <a href="{{ url_for('examen.realizar_examen', examen_id=examen.id) }}">Realizar</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('examen.crear_examen') }}">Crear Examen</a>

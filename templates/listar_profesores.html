@@ -1,0 +1,21 @@
+ {% extends "layout.html" %}
+
+    {% block content %}
+    <div class="max-w-4xl mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4 text-center">Lista de Profesores</h1>
+        <a href="{{ url_for('profesores.agregar_profesor') }}">Agregar Profesor</a>
+        <ul>
+            {% for profesor in profesores %}
+            <li>
+                {{ profesor.nombre }} {{ profesor.apellidos }} - {{ profesor.email }}
+                <a href="{{ url_for('profesores.editar_profesor', id=profesor.id) }}">Editar</a>
+                <form action="{{ url_for('profesores.eliminar_profesor', id=profesor.id) }}" method="POST" style="display:inline;">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endblock %}
+</body>
+</html>
